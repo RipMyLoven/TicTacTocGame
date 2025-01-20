@@ -54,19 +54,19 @@ boxes.forEach((box) => {
       if (playerOneChoices.length >= 3 || playerTwoChoices.length >= 3) {
         if (checkForWinner(playerOneChoices)) {
           winnerDeclaration.classList.toggle("show-winner");
-          winnerText.innerText = "The winner is player one!";
+          winnerText.innerText = "Võitja on mängija üks!";
           winnerText.style.color = "#F2B147";
           addPlayerOneScore();
           playerOnePlaceholder.innerText = sessionStorage.getItem("p1Score");
         } else if (checkForWinner(playerTwoChoices)) {
           winnerDeclaration.classList.toggle("show-winner");
-          winnerText.innerText = "The winner is player two!";
+          winnerText.innerText = "Võitja on teine mängija!";
           winnerText.style.color = "#3CC4BF";
           addPlayerTwoScore();
           playerTwoPlaceholder.innerText = playerTwoScore;
         } else if (clickCounter === 9) {
           winnerDeclaration.classList.toggle("show-winner");
-          winnerText.innerText = `It's a tie :( `;
+          winnerText.innerText = `See on võrdne :( `;
           addTieScore();
           tiePlaceholder.innerText = tieScore;
           winnerText.style.color = "lightgrey";
